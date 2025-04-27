@@ -1,0 +1,389 @@
+/* Sección Sobre Nosotros */
+/* Sección Sobre Nosotros */
+.about-section {
+    padding: 60px 0;
+    background-color: #f1f1f1; /* Gris claro, podés cambiar a #e0e0e0 o #dcdcdc si querés más oscuro */
+    color: #000; /* Cambié el texto a negro para mejor contraste sobre fondo claro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.about-content h4 {
+   
+    color: #ed5050; /* Color rojo para el subtítulo */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.about-content h1 {
+   
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-content p {
+    
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.3;
+    max-width: 800px;
+  
+    margin-right: auto;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 150px; /* o el tamaño que quieras */
+}
+
+
+
+.gallery-item {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.gallery-item img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    filter: grayscale(100%); /* Imagen en blanco y negro por defecto */
+}
+
+.gallery-item:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+   
+}
+
+/* Sección Nuestro Equipo */
+.team-section {
+   
+    padding: 80px 0 40px 0px;
+
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: left; /* Mantiene el texto alineado a la izquierda */
+}
+/* Contenedor para limitar el ancho del contenido */
+.team-content {
+    max-width: 800px; /* Ajusta según el tamaño deseado */
+    width: 100%;
+}
+
+.team-content h1 {
+    font-family: 'OpenSans-Bold';
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  
+}
+
+.team-content p {
+    font-family: 'OpenSans-Regular';
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    gap: 63px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    font-family: 'OpenSans-Bold';
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    -webkit-text-stroke: 1px #ffffff;  
+    color: #ffffff; /* Rojo para los números */
+}
+
+.stat-item p {
+    font-family: 'OpenSans-Bold';
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .image-gallery {
+      justify-content: center;
+    }
+  
+    .gallery-item {
+      width: 22%; /* 4 en fila: 22% porque suma espacio de márgenes */
+    }
+  
+   
+  }
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    .about-section {
+        padding-left: 10%; /* Reduce el margen izquierdo en dispositivos móviles */
+        padding-right: 10%; /* Añade un margen derecho para centrar el contenido mejor */
+        align-items: center; /* Centra verticalmente */
+        justify-content: center; /* Centra horizontalmente */
+        text-align: left; /* Mantiene el texto alineado a la izquierda */
+    }
+
+    .about-content {
+        width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
+        max-width: none; /* Elimina la limitación del ancho máximo */
+    }
+    
+.gallery-item {
+    
+    width: 90px;
+    height: 90px;
+  
+}
+.statistics {
+    
+    gap: 15px;
+    
+}
+
+.stat-item {
+  
+     flex: 1 1 40%; /* Ajuste predeterminado para pantallas más grandes */
+   
+}
+.stat-item h2 {
+    font-size: 1.5rem;
+  
+}
+
+.stat-item p{
+    font-size: 1rem;
+}
+
+
+.team-section{
+    background-image: url('../images/Assets/nosotros/Grupo\ Dragon_\ Nuestro\ equipo_395\ x\ 600.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+}
+.team-content h1{
+    font-size: 1.7rem;
+}
+}
+
+
+/* Estilos del Popup */
+.popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    z-index: 1000; /* Asegura que esté por encima de todo el contenido */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease; /* Animación de aparición */
+}
+
+.popup-content {
+    position: relative;
+    background-image: url('../img/hankar/Desplegable\ fondo.jpg'); /* Imagen de fondo del popup */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width:1000px;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column; /* Permite apilar contenido verticalmente */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra alrededor del popup */
+    color: white;
+    border-radius: 8px;
+    height: auto; /* Altura automática */
+}
+
+
+.popup-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.popup-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.popup-right {
+    margin-top: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio inferior para separar del footer */
+}
+
+.popup-right h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.popup-right p {
+    font-family: 'OpenSans-Regular';
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Animación de Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Animación de Fade Out */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+.popup-info {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    margin-top: auto; /* Empuja la información hacia la parte inferior del popup */
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea divisoria */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #e74c3c; /* Color del ícono */
+}
+
+.info-item span {
+    color: #fff; /* Color del texto */
+    font-size: 1rem;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
+.contact2-item {
+    display: flex;
+    align-items: center;
+    /* Alinea los íconos y el texto verticalmente en el centro */
+    text-align: left;
+    font-size: 1rem;
+    color: #fffefe;
+    /* Color del texto para asegurar legibilidad */
+    max-width: 300px;
+}
+
+.contact2-item i {
+    font-size: 2rem;
+    color: #fffefe;
+    margin-right: 15px;
+    /* Espacio entre el ícono y el texto */
+}
+
+.contact2-item div {
+    line-height: 1.5;
+}
+
+/* Ajustes para la versión móvil */
+@media screen and (max-width: 768px) {
+    .popup-left, .popup-right {
+        display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: left; /* Mantiene el texto alineado a la izquierda */
+        margin-bottom: 15px; /* Añade margen inferior */
+    }
+
+    .popup-logo {
+        max-width: 150px; /* Ajusta el tamaño del logo para móviles */
+        margin-bottom: 15px; /* Añade espacio entre el logo y el texto */
+    }
+
+    .popup-right h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título en móviles */
+    }
+
+    .popup-right p {
+        font-size: 1rem; /* Reduce el tamaño del texto en móviles */
+    }
+
+    .popup-info {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 5%;
+        gap: 10px; /* Añadir espacio entre elementos */
+        margin-top: 15px; /* Asegura un margen en la parte superior */
+        padding-top: 10px;
+        
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .info-item {
+        justify-content: center; /* Centra los elementos informativos */
+    }
+
+    .popup-close {
+        top: 10px;
+        right: 10px;
+        font-size: 2.5rem; /* Reduce el tamaño del botón de cerrar */
+    }
+}
