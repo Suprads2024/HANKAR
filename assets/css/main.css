@@ -5265,9 +5265,17 @@ span {
 }
 
 @media (max-width: 767px) {
+  /* H más grande y alineada al centro */
+.letra-h {
+  color: #ffe323 !important;
+  font-size: 1.15em!important; /* Hacerla más grande */
+  display: inline-flex!important;
+  align-items: center!important; /* Alinea verticalmente la H */
+  margin-right: 6px!important; /* Separación justa */
+}
   .preloader .animation-preloader .txt-loading {
     font-family: Arial, Helvetica, sans-serif!important;
-    font-size: 2.5em!important;
+    font-size: 1em!important;
     font-weight:800!important;
   }
   
