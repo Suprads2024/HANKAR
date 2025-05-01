@@ -987,7 +987,10 @@ span {
 }
 .splt-txt .whitespace {
   width: 8px;
+
 }
+
+
 .splt-txt.animated .char {
   -webkit-animation: fadeInRight 0.4s cubic-bezier(0.3, 0, 0.7, 1) both;
   animation: fadeInRight 0.4s cubic-bezier(0.3, 0, 0.7, 1) both;
@@ -5263,8 +5266,9 @@ span {
 
 @media (max-width: 767px) {
   .preloader .animation-preloader .txt-loading {
-    font-size: 2.5em!important;
+    font-size: 2.5em;
   }
+  
 }
 
 /* H más grande y alineada al centro */
