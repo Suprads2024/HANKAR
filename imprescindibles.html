@@ -43,26 +43,18 @@
 
 <body>
 
-  
     <!-- Preloader Start -->
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner">
             </div>
             <div class="txt-loading">
-                <span data-text-preloader="H" class="letters-loading letra-h">
-                    H
-                </span>
-                <span class="subrayado-ankar">
-                    <span data-text-preloader="a" class="letters-loading letra-ankar">a</span>
-                    <span data-text-preloader="n" class="letters-loading letra-ankar">n</span>
-                    <span data-text-preloader="k" class="letters-loading letra-ankar">k</span>
-                    <span data-text-preloader="a" class="letters-loading letra-ankar">a</span>
-                    <span data-text-preloader="r" class="letters-loading letra-ankar">r</span>
-                </span>
+                <span class="letra-h">H</span>
+                <span class="subrayado-ankar letra-ankar">ankar</span>
             </div>
-            
-            
+
+
+
             <!--<<  <p class="text-center">Loading</p>>>-->
         </div>
         <div class="loader">
@@ -106,7 +98,7 @@
                             </button>
                         </div>
                     </div>
-                   
+
                     <div class="mobile-menu fix mb-3"></div>
                     <div class="offcanvas__contact">
                         <h4>Contact Info</h4>
@@ -128,7 +120,7 @@
                                             class="mailto:info@example.com">info@hankar.com.ar</span></a>
                                 </div>
                             </li>
-                            
+
                             <li class="d-flex align-items-center">
                                 <div class="offcanvas__contact-icon mr-15">
                                     <i class="far fa-phone"></i>
@@ -143,7 +135,7 @@
                                 <span>Contactar<i class="fa-solid fa-arrow-right-long"></i></span>
                             </a>
                         </div>
-                       <!--  <div class="social-icon d-flex align-items-center">
+                        <!--  <div class="social-icon d-flex align-items-center">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-youtube"></i></a>
@@ -191,27 +183,21 @@
                                             </a>
                                             <ul class="submenu">
                                                 <li class="has-dropdown">
-                                                    <a href="imprescindibles.html">
+                                                    <a href="#top">
                                                         Imprescindibles
                                                         <!-- <i class="fas fa-angle-down"></i>-->
                                                     </a>
-                                                     <!--  <ul class="submenu">
+                                                    <!--  <ul class="submenu">
                                                         <li><a href="team.html">Our Team</a></li>
                                                         <li><a href="team-details.html">Team Details</a></li>
                                                     </ul>-->
                                                 </li>
                                                 <li><a href="motores.html">Motores</a></li>
                                                 <li><a href="herramientas.html">Herramientas</a></li>
-                                             
+
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="service-details.html">
-                                                Autoelevadores
-
-                                            </a>
-
-                                        </li>
+                                        
                                         <li>
                                             <a href="servicios.html">
                                                 Servicios de Reperación
@@ -226,7 +212,7 @@
                                     </ul>
                                 </nav>
                                 <div class="header-right d-flex justify-content-end align-items-center">
-                                   
+
                                     <div class="header__hamburger d-xl-block my-auto">
                                         <div class="sidebar__toggle">
                                             <i class="fas fa-bars"></i>
@@ -259,7 +245,8 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <!-- Breadcrumb Section Start -->
-            <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb-bg.jpg');">
+            <div class="breadcrumb-wrapper bg-cover"
+                style="background-image: url('assets/img/service/1920x400\ imprescindible.jpg');">
                 <div class="shape-image float-bob-y">
                     <img src="assets/img/vector.png" alt="img">
                 </div>
@@ -314,7 +301,10 @@
                                                                 alt="icono seguridad" class="icono-titulo">
                                                             Seguridad
                                                         </h4>
-                                                        <p>Alarmas marcha atrás, bocinas, cinturones de seguridad, espejos, espejos panorámicos, balizas estroboscópica, bluespots, faros de trabajo LED, luces de advertencia LED roja, y más.</p>
+                                                        <p>Alarmas marcha atrás, bocinas, cinturones de seguridad,
+                                                            espejos, espejos panorámicos, balizas estroboscópica,
+                                                            bluespots, faros de trabajo LED, luces de advertencia LED
+                                                            roja, y más.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -373,7 +363,8 @@
                                                                 alt="icono vehículos" class="icono-titulo">
                                                             Vehículos Industriales
                                                         </h4>
-                                                        <p>Kit de luces, cámaras de seguridad, asientos, porta
+                                                        <p class="texto-accesorio">
+                                                            Kit de luces, cámaras de seguridad, asientos, porta
                                                             documentos, calefacciones y refrigeradores de cabina,
                                                             accesorios de cabina, parabrisas, motores limpiaparabrisas,
                                                             convertidores de corriente, enrolladores hidráulicos,
@@ -389,10 +380,23 @@
                                                             elevación, instrumentos digitales de medición (eléctrica,
                                                             mecánica, temperatura, batería, aire, especial), timón para
                                                             transpaleta, cables de batería, teclado para bloqueo de
-                                                            seguridad.</p>
+                                                            seguridad.
+                                                        </p>
+                                                        <button class="ver-mas-btn">Ver más</button>
                                                     </div>
                                                 </div>
                                             </div>
+<script>// Cuando el botón "Ver más" es clickeado
+    document.querySelector('.ver-mas-btn').addEventListener('click', function() {
+        var texto = document.querySelector('.texto-accesorio');
+        texto.classList.toggle('mostrar'); // Activa o desactiva la clase que expande el texto
+        if (texto.classList.contains('mostrar')) {
+            this.innerText = "Ver menos"; // Cambia el texto del botón a "Ver menos"
+        } else {
+            this.innerText = "Ver más"; // Vuelve a cambiar el texto a "Ver más"
+        }
+    });
+    </script>
 
                                         </div>
 
@@ -410,61 +414,64 @@
 
 
             <!-- Footer Section Start -->
-<footer class="footer-section bg-cover bg-cover" style="background-image: url('assets/img/hankar/footer.jpg');">
-    <div class="container">
-        <div class="contact-info-area">
-            <a href="index.html" class="logo-img wow fadeInUp" data-wow-delay=".2s">
-                <img src="assets/img/logo/163x71 Hankar_Color.png" alt="img">
-            </a>
+            <footer class="footer-section bg-cover bg-cover"
+                style="background-image: url('assets/img/hankar/footer.jpg');">
+                <div class="container">
+                    <div class="contact-info-area">
+                        <a href="index.html" class="logo-img wow fadeInUp" data-wow-delay=".2s">
+                            <img src="assets/img/logo/163x71 Hankar_Color.png" alt="img">
+                        </a>
 
-            <!-- Dirección -->
-            <div class="contact-info-items wow fadeInUp" data-wow-delay=".4s">
-                <div class="icon">
-                    <i class="fa-sharp fa-solid fa-location-dot"></i>
-                </div>
-                <div class="content">
-                    <p>Dirección</p>
-                    <h3>Marcos Paz 2566, CABA, Argentina</h3>
-                </div>
-            </div>
+                        <!-- Dirección -->
+                        <div class="contact-info-items wow fadeInUp" data-wow-delay=".4s">
+                            <div class="icon">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <p>Dirección</p>
+                                <h3>Marcos Paz 2566, CABA, Argentina</h3>
+                            </div>
+                        </div>
 
-            <!-- Email -->
-            <div class="contact-info-items wow fadeInUp" data-wow-delay=".6s">
-                <div class="icon">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="content">
-                    <p>Email</p>
-                    <h3>
-                        <a href="mailto:info@hankar.com.ar">info@hankar.com.ar</a>
-                    </h3>
-                </div>
-            </div>
+                        <!-- Email -->
+                        <div class="contact-info-items wow fadeInUp" data-wow-delay=".6s">
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <p>Email</p>
+                                <h3>
+                                    <a href="mailto:info@hankar.com.ar">info@hankar.com.ar</a>
+                                </h3>
+                            </div>
+                        </div>
 
-            <!-- Teléfonos -->
-            <div class="contact-info-items wow fadeInUp" data-wow-delay=".8s">
-                <div class="icon">
-                    <i class="fa-solid fa-phone-volume"></i>
+                        <!-- Teléfonos -->
+                        <div class="contact-info-items wow fadeInUp" data-wow-delay=".8s">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="content">
+                                <p>Teléfonos</p>
+                                <h3>
+                                    <a href="tel:+541145678895">(54-11) 4567-8895</a> / <br>
+
+                                    <a href="tel:+541145662754">4566-2754</a> / <br>
+                                    <a href="tel:+541146482495">4648-2495</a>
+                                </h3>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>© 2025 - Desarrollado por <a href="https://suprads.com/" class="suprads-link"
+                                style="font-weight: bold; color: #7F7CFD;" onmouseover="this.style.color='white'"
+                                onmouseout="this.style.color='#7F7CFD'">Suprads</a></p>
+                    </div>
                 </div>
-                <div class="content">
-                    <p>Teléfonos</p>
-                    <h3>
-                        <a href="tel:+541145678895">(54-11) 4567-8895</a> / <br>
-
-                        <a href="tel:+541145662754">4566-2754</a> / <br>
-                        <a href="tel:+541146482495">4648-2495</a>
-                    </h3>
-                </div>
-            </div>
-
-           
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2025 - Desarrollado por <a href="https://suprads.com/" class="suprads-link" style="font-weight: bold; color: #7F7CFD;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#7F7CFD'">Suprads</a></p>
-        </div>
-    </div>
-</footer>
+            </footer>
         </div>
     </div>
 
