@@ -3829,7 +3829,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+  background: rgba(0, 0, 0, 0.7); /* Negro con 50% de opacidad */
   z-index: 1;
 }
 
